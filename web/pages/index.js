@@ -3,15 +3,13 @@ import { Recipe } from "../components/Recipe"
 
 const HomePage = (props) => {
   const {recipes} = props
-  console.log(props)
-  console.log(recipes)
 
   return (
     <div className="home">
       <h1>Kokeboka!</h1>
       <div className="recipes-list">
         {recipes.map(recipe => 
-            <Recipe recipe={recipe}/>
+            <Recipe key={recipe.slug.current} recipe={recipe}/>
           )}
       </div>
     </div>

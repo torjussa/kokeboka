@@ -22,6 +22,20 @@ export default
       name: "vegetarian",
       type: "boolean", 
       initialValue: false   
-    }
+    },
+    {
+        title: 'Slug',
+        name: 'slug',
+        type: 'slug',
+        validation: Rule => Rule.required(),
+        options: {
+          source: 'name',
+          maxLength: 200, // will be ignored if slugify is set
+          slugify: input => input
+                               .toLowerCase()
+                               .replace(/\s+/g, '-')
+                               .slice(0, 200)
+        }
+      }
   ]
 }
