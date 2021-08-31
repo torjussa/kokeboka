@@ -4,12 +4,57 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #eae7dc
 }
 
+/* Some basic styling for elements*/
 a {
   color: inherit;
   text-decoration: none;
 }
+
+h1 {
+  color: #e98074
+}
+
+h3 {
+  color: #e98074
+}
+
+
+p {
+  font-size: 18px;  
+  color: #575655;
+  margin-top: 0;
+}
+
+
+/* Styling for class names*/
+.app {
+  margin: 5vh 3vw;
+}
+
+.home {
+
+}
+
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe {
+  display: flex;
+  padding: 5px 10px;
+  flex-direction: column;
+}
+.recipe:hover {
+  cursor: pointer;
+  background-color: #dcd7c7;
+
+}
+
+
 
 * {
   box-sizing: border-box;
