@@ -3,7 +3,8 @@
 
  
 
-Hva trenger man på forhånd? Node, npm/yarn, git
+Hva trenger man på forhånd? Node (v16), npm/yarn, git
+
 
 
 
@@ -15,7 +16,7 @@ Static Generation (Recommended): The HTML is generated at build time and will be
 Server-side Rendering: The HTML is generated on each request. 
  	
 ### Web app
-* Lag en tom mappe med hvilket som helst navn.
+* Lag en tom mappe med hvilket som helst navn og gå inn i den.
 * Initier git med `git init`
  
 * Skriv `yarn/npx create next-app`
@@ -29,11 +30,11 @@ Server-side Rendering: The HTML is generated on each request.
 
 
 ### Push appen med git
-* Gå til github.com og lag repo
 * Git add
 * Git commit
+* Gå til github.com og lag repo
 * Git remote add origin <link>
-* Git push -u origin main/master
+* Git push -u origin master
   * Oppdater github og vis at koden ligger der.
 
 ### Sanity 
@@ -44,7 +45,6 @@ Server-side Rendering: The HTML is generated on each request.
 * I studio mappen: sanity init
   * Logg inn
  
-
 
 * Start prosjektet med sanity start -> localhost 3333
 
