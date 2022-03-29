@@ -93,6 +93,8 @@ export default
   
 ### Hent data fra sanity
 * Add cors. `Sanity cors add http://localhost:3000`. Evt på sanity.io
+
+* Gå til web
 * Install sanity client: `yarn add @sanity/client`
   * Verifiser at den finnes i package json
 
