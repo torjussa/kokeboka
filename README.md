@@ -181,7 +181,9 @@ export default Oppskrift
 *Hva er Vercel? Alternativer: github pages, heroku, azure.*
 
 * Installer Vercel cli `Npm i -g vercel`
-* Fra web mappen: `Vercel login` deretter deploy med `vercel`
+* Sjekk at bygget fungerer med `yarn build`
+* Fra "prosjekt" mappen: `Vercel login` deretter deploy med `vercel`
+	* Pek prosjektet til WEB 
 
 * Legg til cors i sanity til den nye web-app lenken 
  
@@ -191,6 +193,7 @@ export default Oppskrift
 - Riktig deployment settings (NEXT.js i vercel settings)
 
 #### Extra:
+- link mot github, slik at endringer deployes
 - Ingredienser (Arrays i Sanity)
 - Bilder
 
