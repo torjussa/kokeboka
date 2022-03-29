@@ -1,5 +1,5 @@
 # Walkthrough 
-### Notater fra kurs 06.09.21 med Abakus
+### Workshop React og Sanity 
 
  
 
