@@ -132,7 +132,7 @@ HomePage.getInitialProps = async () => {
 export default HomePage
 ```
 
-*Asynkron funksjon lar oss bruke await for å vente på svar. Funksjonen garanterer en return value med et såkalt promise.*
+* Asynkron funksjon lar oss bruke await for å vente på svar. Funksjonen garanterer en return value med et såkalt promise.*
 
 - Se i konsollen hva vi mottar
 
@@ -150,29 +150,33 @@ export const Recipe = ({recipe}) =>
 
 ### Dynamiske sider i Next m/sanity
 * Snakk om konseptet med sider og dynamiske sider i Next
+ * Alt i `pages` mappen blir sider/lenker på din nettside
  * Upraktisk å skulle lage en side for hver oppskrift
  
-* Lag en slug i Sanity
-* Hent riktig oppskrift med GROQ query
+* Lag en slug i oppskrift skjemaet i Sanity
+* Hent riktig oppskrift med GROQ query i din web app
  
 #### oppskrift/[slug].jsx:
  ```javascript 
 const Oppskrift = (props) => {
-console.log(props)
-const {recipe} = props
+	console.log(props)
+	const {recipe} = props
 
-return <h1> {recipe.name}</h1>
+	return <h1> {recipe.name}</h1>
 }
+
+// Vi henter den oppskriften som matcher query slugen (det bakerste i url'en)
 Oppskrift.getInitialProps = async (context) => {
-const { slug = ""} = context.query
+	const { slug = ""} = context.query
 return {
     	recipe: await client.fetch(`*[_type == 'recipe' && slug.current == $slug][0]`,{slug})
-}
+	}
 }
 export default Oppskrift
 ```
 
 ### Deploy Sanity
+For at Sanity studioet skal være tilgjengelig offentlig (ikke bare på localhost) må vi deploye med følgende kommando fra sanity prosjektmappen.
 `Sanity deploy`
 
   
@@ -181,19 +185,20 @@ export default Oppskrift
 *Hva er Vercel? Alternativer: github pages, heroku, azure.*
 
 * Installer Vercel cli `Npm i -g vercel`
-* Sjekk at bygget fungerer med `yarn build`
+* Sjekk at bygget (web prosjektet) fungerer med `yarn build`
+	* Fiks eventuelle feil. 
 * Fra "prosjekt" mappen: `Vercel login` deretter deploy med `vercel`
 	* Pek prosjektet til WEB 
 
-* Legg til cors i sanity til den nye web-app lenken 
+* Legg til CORS i Sanity til den nye public web-app lenken 
  
-#### Et par ting som kan gå galt:
+#### Et par ting som kan gå galt ved deployment.
 - Feil mappe man kjører fra
-- Cors settings.
+- CORS settings
 - Riktig deployment settings (NEXT.js i vercel settings)
 
-#### Extra:
+#### Annet man kan se på:
 - link mot github, slik at endringer deployes
 - Ingredienser (Arrays i Sanity)
-- Bilder
+- Legge til bilder i Sanity og vise de i web appen med [Image-url builder](https://www.sanity.io/docs/image-url)
 
