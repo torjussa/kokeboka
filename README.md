@@ -198,7 +198,7 @@ For at Sanity studioet skal være tilgjengelig offentlig (ikke bare på localhos
 - Riktig deployment settings (NEXT.js i vercel settings)
 
 #### Annet man kan se på:
-- link mot github, slik at endringer deployes
-- Ingredienser (Arrays i Sanity)
-- Legge til bilder i Sanity og vise de i web appen med [Image-url builder](https://www.sanity.io/docs/image-url)
+- Logg inn på vercel og sett opp link mot githubprosjektet, slik at endringer i koden deployes på nett.
+- Ingredienser (Arrays i Sanity).
+- Legge til bilder i Sanity og vise de i web appen med [Image-url builder](https://www.sanity.io/docs/image-url).
 
