@@ -16,10 +16,18 @@ Static Generation (Recommended): The HTML is generated at build time and will be
 Server-side Rendering: The HTML is generated on each request. 
  	
 ### Web app
-* Lag en tom mappe med hvilket som helst navn og gå inn i den.
+Vi skal lage et prosjekt med to deler - en frontendel "web" og en innholdsstyring "studio".
+```
+kokeboka  
+> web  
+> studio
+```
+
+* Lag en tom mappe med hvilket som helst navn og gå inn i den.  
+ Eksempel: `mkdir kokeboka`
 * Initier git med `git init`
  
-* Skriv `yarn/npx create next-app`
+* om du har yarn skriv `yarn create next-app`. Med npx `npx create next-app`.
   * Gi den et navn: eks: web
 
 * Kjør opp appen med yarn dev
@@ -46,7 +54,7 @@ Server-side Rendering: The HTML is generated on each request.
   * Logg inn
  
 
-* Start prosjektet med sanity start -> localhost 3333
+* Start prosjektet med sanity start -> localhost:3333
 
 * Lag et enkelt skjema (recipe)
   * String navn
@@ -100,8 +108,8 @@ export default
 
 Lag en `client.js` fil og link til ditt sanity prosjekt
  ```javascript
-Import sanityClient from'@sanity/client'
-Export default sanityClient({
+import sanityClient from '@sanity/client'
+export default sanityClient({
 projectId:'your-project-id',
 dataset:'production',
 useCdn:true// })
